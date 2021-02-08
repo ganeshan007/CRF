@@ -194,6 +194,19 @@ swda_irregular_annotation_strings = [
 ]
 
 tag_name_dict = {
+'a2g':{
+    'irq':'Information Request',
+    'id':'Information Delivery',
+    'cd': 'Command',
+    'cr': 'command response',
+    'gt': 'greeting',
+    'gc': 'general chat',
+    'ack':'acknowledgement',
+    'ap':'apology',
+    'hp':'help',
+    'ynq':'yes/no question',
+    'yna':'yes/no answer'
+},
 'swda': {
  '+': 'Interruption',
  '%': 'Abandoned or Turn-Exit, Uninterpretable',
