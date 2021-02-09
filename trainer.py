@@ -129,7 +129,7 @@ def get_s2v_module(encoder_type, word_embedding_matrix, n_hidden, dropout_rate):
 
 
 def train(X, Y, SPK, SPK_C, encoder_type, word_embedding_matrix, tag_lb, n_tags, n_spks, batch_size, dropout_rate, crf_lr_multiplier, mode, path_to_results):
-    epochs = 10
+    epochs = 20
     n_hidden = 300
     n_train_samples = len(X['train'])
     n_valid_samples = len(X['valid'])
@@ -139,7 +139,7 @@ def train(X, Y, SPK, SPK_C, encoder_type, word_embedding_matrix, tag_lb, n_tags,
 
     callbacks = [ModelCheckpoint(filepath=path_to_results+'model_on_epoch_end/'+'{epoch}.h5',
                                  save_weights_only=True),
-                 EarlyStopping(monitor='val_viterbi_accuracy', patience=3)]
+                 EarlyStopping(monitor='val_viterbi_accuracy', patience=20)]
 
     input_X = Input(shape=(None, None), dtype='int32')
     s2v_module = get_s2v_module(encoder_type, word_embedding_matrix, n_hidden, dropout_rate)
