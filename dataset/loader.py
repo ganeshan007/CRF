@@ -197,7 +197,7 @@ tag_name_dict = {
 'a2g':{
     'irq':'Information Request',
     'id':'Information Delivery',
-    'cd': 'Command',
+    'cmd': 'Command',
     'cr': 'command response',
     'gt': 'greeting',
     'gc': 'general chat',
