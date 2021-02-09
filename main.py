@@ -72,7 +72,7 @@ for key, value in zip(['train', 'valid', 'test'], [train_set_idx, valid_set_idx,
 ##########
 
 param_grid = {
-    'encoder_type': ['lstm'],  # lstm, bilstm, att-bilstm
+    'encoder_type': ['att-bilstm'],  # lstm, bilstm, att-bilstm
     'mode': ['our_crf-spk_c'],
     'batch_size': [4],
     'dropout_rate': [0.2],
